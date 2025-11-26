@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Outfit", system-ui, sans-serif;
+
+  --color-space-950: #0B0D17;
+  --color-space-900: #151932;
+  --color-space-800: #1E2442;
+  --color-space-700: #2A325A;
+  --color-space-600: #3D477A;
+  --color-space-500: #5664A3;
+  --color-space-400: #7383CC;
+  --color-space-300: #94A3F2;
+  --color-space-200: #BCC6FF;
+  --color-space-100: #E0E5FF;
+  --color-space-50: #F0F3FF;
+
+  --color-accent-cyan: #00F0FF;
+  --color-accent-purple: #7000FF;
+  --color-accent-pink: #FF0080;
+
+  --shadow-neon: 0 0 30px -10px rgba(0, 240, 255, 0.3);
+  --shadow-glow-white: 0 0 20px rgba(255, 255, 255, 0.4);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px -5px var(--color-accent-cyan);
+    }
+
+    to {
+      box-shadow: 0 0 20px 5px var(--color-accent-cyan);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-space-950 text-space-100 font-sans min-h-screen overflow-x-hidden selection:bg-accent-cyan selection:text-space-950;
+    background-image:
+      radial-gradient(circle at 15% 50%, rgba(0, 240, 255, 0.1) 0%, transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.15) 0%, transparent 25%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-space-900/40 backdrop-blur-xl border border-white/10 shadow-xl;
+  }
+
+  .glass-card {
+    @apply bg-space-800/30 backdrop-blur-md border border-white/5 hover:border-accent-cyan/50 transition-all duration-500 ease-out hover:bg-space-800/50 hover:shadow-neon;
+  }
+
+  .btn-primary {
+    @apply relative overflow-hidden bg-white text-space-950 font-bold py-3 px-8 rounded-full transition-all duration-500 ease-out hover:scale-105 hover:shadow-glow-white active:scale-95;
+  }
+
+  .btn-glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium py-2 px-6 rounded-full transition-all duration-500 ease-out hover:bg-white/20 hover:border-white/40 active:scale-95;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-space-200 to-space-400;
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan to-white;
+  }
+}
