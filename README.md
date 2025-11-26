@@ -110,15 +110,15 @@ nasa-apod-explorer/
 
 ### Dashboard
 Today's APOD with full-screen hero image and details.
-![Dashboard Screenshot](screenshots/dashboard(.jpeg))
+![Dashboard Screenshot](screenshots/dashboard.jpeg)
 
 ### Gallery
 View of all the astronomy pictures you have visited.
-![Gallery Screenshot](screenshots/gallery(.jpeg))
+![Gallery Screenshot](screenshots/gallery.jpeg)
 
 ### Explorer
 Date picker to explore any APOD from the archive.
-![Explorer Screenshot](screenshots/explorer(.jpeg))
+![Explorer Screenshot](screenshots/explorer.jpeg)
 
 ## License
 
