@@ -106,16 +106,19 @@ nasa-apod-explorer/
         └── utils/         # Helper functions
 ```
 
-## Screenshots
+
 
 ### Dashboard
 Today's APOD with full-screen hero image and details.
+![Dashboard Screenshot](screenshots/dashboard(.jpeg))
 
 ### Gallery
-Grid view of all the astronomy pictures you have visited.
+View of all the astronomy pictures you have visited.
+![Gallery Screenshot](screenshots/gallery(.jpeg))
 
 ### Explorer
 Date picker to explore any APOD from the archive.
+![Explorer Screenshot](screenshots/explorer(.jpeg))
 
 ## License
 
